@@ -91,13 +91,13 @@ public class Main {
         lada.addEngineer(tim);
 
         lada.printAllInfo();
-
+        System.out.println();
         printSeparator();
 
         ServiceStation s = new ServiceStation();
-        s.addTransports(audi);
-        s.addTransports(aeroTown);
-        s.addTransports(lada);
+        s.addCar(audi);
+        s.addTruck(tgl);
+        s.addCar(lada);
         s.service();
 
         printSeparator();
