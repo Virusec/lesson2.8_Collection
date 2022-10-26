@@ -25,4 +25,12 @@ public class Sponsor {
     public void sponsorTheRace() {
         System.out.println("Спонсор " + getName() + " спонсирует заезд на " + getAmountOfSupport() + " !");
     }
+
+    @Override
+    public String toString() {
+        return "Sponsor{" +
+                "name='" + name + '\'' +
+                ", amountOfSupport=" + amountOfSupport +
+                '}';
+    }
 }

@@ -46,4 +46,13 @@ public class Engineer<B extends Transport> {
     public String getCompany() {
         return company;
     }
+
+    @Override
+    public String toString() {
+        return "Engineer{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", company='" + company + '\'' +
+                '}';
+    }
 }
