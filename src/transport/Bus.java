@@ -70,4 +70,5 @@ public class Bus extends Transport implements Competing {
     public void fixTransport() {
         System.out.println("Автобусу " + getBrand() + " " + getModel() + " починен!");
     }
+
 }

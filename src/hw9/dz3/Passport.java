@@ -66,11 +66,11 @@ public class Passport {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Passport passport = (Passport) o;
-        return numberPassport == passport.numberPassport && dateOfBirth == passport.dateOfBirth && Objects.equals(name, passport.name) && Objects.equals(surname, passport.surname) && Objects.equals(patronymic, passport.patronymic);
+        return numberPassport == passport.numberPassport ;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(numberPassport, name, surname, patronymic, dateOfBirth);
+        return Objects.hash(numberPassport);
     }
 }

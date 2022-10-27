@@ -17,4 +17,5 @@ public enum TypeOfWeight {
     public String getDescription() {
         return description;
     }
+
 }

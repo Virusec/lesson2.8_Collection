@@ -18,7 +18,7 @@ public class Main {
         for (Product product : products) {
             ProductList.addProduct(product);
         }
-        System.out.println(ProductList.productList);
+        System.out.println(ProductList.getProductList());
         printSeparator();
         System.out.println("Домашнее задание 2.Задание 1");
         Recipe friedPotato = new Recipe("Жареная картошка");
@@ -30,7 +30,7 @@ public class Main {
         salad.addProductRecipe(tomato);
         salad.addProductRecipe(onion);
 
-        Recipe salad1 = new Recipe("Салат");
+        Recipe salad1 = new Recipe("Салат1");
         salad1.addProductRecipe(cucumber);
         salad1.addProductRecipe(tomato);
         salad1.addProductRecipe(onion);
