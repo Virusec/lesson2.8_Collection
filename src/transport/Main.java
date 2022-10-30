@@ -20,32 +20,33 @@ public class Main {
         Truck vario = new Truck("Mercedes-Benz", "Vario", 4.2, TypeOfWeight.N1);
         Truck tgl = new Truck("MAN", "TGL", 6.7, TypeOfWeight.N1);
 
-        aeroTown.printInfo();
-        tgl.doBestLapTime();
+//        aeroTown.printInfo();
+//        tgl.doBestLapTime();
 
         Driver<Bus> kostya = new Driver<>("Kostya Minin", "D", 6, crafter);
         Driver<Car> andrei = new Driver<>("Andrei Ivanov", "B", 4, audi);
         Driver<Car> maxim = new Driver<>("Maxim Zonin", "B", 4, lada);
         Driver<Truck> mihail = new Driver<>("Mihail Kotov", "C", 8, vario);
 
-        kostya.startMoving(aurora);
-        andrei.startMoving(bmw);
-        mihail.refuel(fighter);
+//        kostya.startMoving(aurora);
+//        andrei.startMoving(bmw);
+//        mihail.refuel(fighter);
+//
+//        printInfoRace(andrei);
+//
+//        lada.setTypeOfBody(TypeOfBody.HATCHBACK);
+//        crafter.determineType();
+//        sprinter.determineType();
+//        hyundai.determineType();
+//        bichok.determineType();
+//
+//        service(aeroTown, aurora, crafter, sprinter,
+//                lada, audi, bmw, hyundai,
+//                fighter, bichok, vario, tgl);
+//        printSeparator();
 
-        printInfoRace(andrei);
-
-        lada.setTypeOfBody(TypeOfBody.HATCHBACK);
-        crafter.determineType();
-        sprinter.determineType();
-        hyundai.determineType();
-        bichok.determineType();
-
-        service(aeroTown, aurora, crafter, sprinter,
-                lada, audi, bmw, hyundai,
-                fighter, bichok, vario, tgl);
-        printSeparator();
-
-        List<Competing> transportList = new ArrayList<>(12);
+        Set<Competing> transportList = new HashSet<>(13);
+        transportList.add(lada);
         transportList.add(lada);
         transportList.add(audi);
         transportList.add(bmw);
@@ -58,68 +59,78 @@ public class Main {
         transportList.add(bichok);
         transportList.add(vario);
         transportList.add(tgl);
+        System.out.println(transportList);
 
         Sponsor simaLand = new Sponsor("Sima Land", 200_000);
         Sponsor bp = new Sponsor("British Petroleum", 300_000);
         Sponsor mVideo = new Sponsor("M video", 400_000);
 
-        Engineer bob = new Engineer<>("Bob", "Marley", "American technic");
-        Engineer mark = new Engineer<>("Mark", "Worst", "American technic");
-        Engineer tim = new Engineer<>("Tim", "Lloyd", "Technic system");
 
-        List<Sponsor> sponsorList = new ArrayList<>();
+        Set<Sponsor> sponsorList = new HashSet<>();
         sponsorList.add(simaLand);
         sponsorList.add(bp);
         sponsorList.add(mVideo);
+        sponsorList.add(mVideo);
+        System.out.println(sponsorList);
 
-        List<Driver> driverList = new ArrayList<>();
+
+        Set<Driver> driverList = new HashSet<>();
         driverList.add(kostya);
         driverList.add(andrei);
         driverList.add(maxim);
+        driverList.add(maxim);
         driverList.add(mihail);
+        System.out.println(driverList);
 
-        List<Engineer> engineerList = new ArrayList<>();
+        Engineer tim = new Engineer<>("Tim", "Lloyd", "Technic system");
+        Engineer mark = new Engineer<>("Mark", "Worst", "American technic");
+        Engineer bob = new Engineer<>("Bob", "Marley", "American technic");
+
+        Set<Engineer> engineerList = new HashSet<>();
         engineerList.add(bob);
         engineerList.add(mark);
         engineerList.add(tim);
+        engineerList.add(tim);
 
-        lada.addDriver(maxim);
-        lada.addSponsor(mVideo);
-        lada.addSponsor(bp);
-        lada.addEngineer(mark);
-        lada.addEngineer(bob);
-        lada.addEngineer(tim);
+        System.out.println(engineerList);
 
-        lada.printAllInfo();
-        System.out.println();
-        printSeparator();
+//        lada.addDriver(maxim);
+//        lada.addSponsor(mVideo);
+//        lada.addSponsor(bp);
+//        lada.addEngineer(mark);
+//        lada.addEngineer(bob);
+//        lada.addEngineer(tim);
 
-        ServiceStation s = new ServiceStation();
-        s.addCar(audi);
-        s.addTruck(tgl);
-        s.addCar(lada);
-        s.service();
-
-        printSeparator();
-
-        Queue<String> queue1 = new ArrayDeque<>(5);
-        Queue<String> queue2 = new ArrayDeque<>(5);
-        for (int i = 0; i < Math.floor(Math.random() * 5); i++) {
-            queue1.offer("Larisa" + i);
-        }
-        for (int i = 0; i < Math.floor(Math.random() * 5); i++) {
-            queue2.offer("Misha" + i);
-        }
-
-        System.out.println(queue1);
-        System.out.println(queue2);
-
-        addConsumer("Vasya", queue1, queue2);
-
-        removeFromQueue("Petya", queue1, queue2);
-
-        printSeparator();
-        example();
+//        lada.printAllInfo();
+//        System.out.println();
+//        printSeparator();
+//
+//        ServiceStation s = new ServiceStation();
+//        s.addCar(audi);
+//        s.addTruck(tgl);
+//        s.addCar(lada);
+//        s.service();
+//
+//        printSeparator();
+//
+//        Queue<String> queue1 = new ArrayDeque<>(5);
+//        Queue<String> queue2 = new ArrayDeque<>(5);
+//        for (int i = 0; i < Math.floor(Math.random() * 5); i++) {
+//            queue1.offer("Larisa" + i);
+//        }
+//        for (int i = 0; i < Math.floor(Math.random() * 5); i++) {
+//            queue2.offer("Misha" + i);
+//        }
+//
+//        System.out.println(queue1);
+//        System.out.println(queue2);
+//
+//        addConsumer("Vasya", queue1, queue2);
+//
+//        removeFromQueue("Petya", queue1, queue2);
+//
+//        printSeparator();
+//        example();
     }
 
     static void example() {

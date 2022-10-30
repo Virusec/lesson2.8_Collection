@@ -1,5 +1,7 @@
 package transport;
 
+import java.util.Objects;
+
 public class Car extends Transport implements Competing {
     private TypeOfBody typeOfBody;
 
@@ -58,5 +60,4 @@ public class Car extends Transport implements Competing {
     public void fixTransport() {
         System.out.println("Автомобиль " + getBrand() + " " + getModel() + " починена!");
     }
-
 }

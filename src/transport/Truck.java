@@ -65,4 +65,5 @@ public class Truck extends Transport implements Competing {
     public void fixTransport() {
         System.out.println("Грузовик " + getBrand() + " " + getModel() + " починен!");
     }
+
 }

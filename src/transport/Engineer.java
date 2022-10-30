@@ -1,5 +1,7 @@
 package transport;
 
+import java.util.Objects;
+
 public class Engineer<B extends Transport> {
     private final String name;
 
@@ -45,5 +47,27 @@ public class Engineer<B extends Transport> {
 
     public String getCompany() {
         return company;
+    }
+
+    @Override
+    public String toString() {
+        return "Engineer{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", company='" + company + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Engineer<?> engineer = (Engineer<?>) o;
+        return Objects.equals(name, engineer.name) && Objects.equals(surname, engineer.surname);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, surname);
     }
 }
